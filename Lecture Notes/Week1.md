@@ -28,9 +28,11 @@ then
 fi
 
 # Display the username.
-USER_NAME=$(id -un)
+# id -un would display the user name, and $() is the notation for the command substitution
+USER_NAME=$(id -un) 
 
 # Test if the command succeeded.
+# ? is the special sign to indicate whether the command has succeeded or not if it is 0, it means that the command does not succeed.
 if [[ "${?}" -ne 0 ]]
 then
   echo 'The id command did not execute successfully.'
@@ -55,4 +57,6 @@ fi
 exit 0
 
 ```
+
+
 
