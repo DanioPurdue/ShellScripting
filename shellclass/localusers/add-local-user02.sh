@@ -25,7 +25,7 @@ fi
 # Generate the password
 PASSWORD="$(date +%s%N | sha256sum | head -c48)"
 echo "Password: ${PASSWORD}"
-passwd ${USERNAME} --stdin ${PASSWORD}
+echo "${PASSWORD}" | passwd --stdin ${USERNAME} 
 if [[ "${?}" -ne 0 ]]
 then
     echo "Passord failed to create"
@@ -33,4 +33,7 @@ then
     exit 1
 fi
 echo "Account and password has been successfully setted up"
+
+# Force user to change its password
+passwd -e "${USERNAME}"
 exit 0
