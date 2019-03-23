@@ -85,9 +85,7 @@ do
         ARCHIVES='true'
         log "Archive accounts"
         ;;
-    *)
-        usage
-        ;;
+    *) usage ;;
     esac
 done
 

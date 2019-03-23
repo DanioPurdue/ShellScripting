@@ -216,7 +216,7 @@ suppose you have a user called woz.
 
 ```shell
 # lock the account by changing the expiration date
-sudo change -E 0 woz
+sudo chage -E 0 woz
 # unlock the account
 sudo chage -E -1 woz
 
@@ -231,7 +231,6 @@ sudo usermod -s /sbin/nologin woz
 
 ```shell
 #!/bin/bash
-
 #This script deletes a user
 ```
 
