@@ -113,3 +113,8 @@ fi
 cut -d '"' -f 2 ${LOG_FILE} | cut -d ' ' -f 2 | sort | uniq -c | sort -n | tail -3
 ```
 
+## `read` 
+
+read things and loaded into variables.
+
+`read -p "username: " USERNAME` what you type is loaded into user variable
